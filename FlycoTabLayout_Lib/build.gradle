@@ -1,16 +1,16 @@
 apply plugin: 'com.android.library'
-//apply plugin: 'com.github.dcendents.android-maven'
-//apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.ernestchang'
 
 // 这个version是区分library版本的，因此当我们需要更新library时记得修改这个version
 version = "2.1.2"
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.1"
+    compileSdkVersion 27
+    buildToolsVersion "27.0.2"
 
     defaultConfig {
-        minSdkVersion 11
-        targetSdkVersion 25
+        minSdkVersion 16
+        targetSdkVersion 27
         versionCode 212
         versionName version
     }
@@ -24,7 +24,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:support-v4:25.1.0'
+    compile 'com.android.support:support-v4:27.0.2'
 }
 
 //def siteUrl = 'https://github.com/H07000223'  // 项目的主页
