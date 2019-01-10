@@ -80,7 +80,6 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
     private float mIndicatorMarginBottom;
     private int mIndicatorGravity;
     private boolean mIndicatorWidthEqualTitle;
-
     /**
      * underline
      */
@@ -94,6 +93,9 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
     private int mDividerColor;
     private float mDividerWidth;
     private float mDividerPadding;
+
+    private int mStrokeColor;
+    private float mStrokeWidth;
 
     /**
      * title
@@ -169,6 +171,9 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
         mDividerColor = ta.getColor(R.styleable.SlidingTabLayout_tl_divider_color, Color.parseColor("#ffffff"));
         mDividerWidth = ta.getDimension(R.styleable.SlidingTabLayout_tl_divider_width, dp2px(0));
         mDividerPadding = ta.getDimension(R.styleable.SlidingTabLayout_tl_divider_padding, dp2px(12));
+
+        mStrokeColor = ta.getColor(R.styleable.SlidingTabLayout_tl_stroke_color, Color.parseColor("#ffffff"));
+        mStrokeWidth = ta.getDimension(R.styleable.SlidingTabLayout_tl_stroke_color, dp2px(0));
 
         mTextsize = ta.getDimension(R.styleable.SlidingTabLayout_tl_textsize, sp2px(14));
         mTextSelectSize = ta.getDimension(R.styleable.SlidingTabLayout_tl_textSelectSize, sp2px(14));
@@ -523,6 +528,7 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
                 }
 
                 mIndicatorDrawable.setColor(mIndicatorColor);
+                mIndicatorDrawable.setStroke((int) mStrokeWidth, mStrokeColor);
                 mIndicatorDrawable.setBounds(paddingLeft + (int) mIndicatorMarginLeft + mIndicatorRect.left,
                         (int) mIndicatorMarginTop, (int) (paddingLeft + mIndicatorRect.right - mIndicatorMarginRight),
                         (int) (mIndicatorMarginTop + mIndicatorHeight));

@@ -107,6 +107,7 @@
                 android:paddingRight="5dp"
                 tl:tl_indicator_margin_left="2dp"
                 tl:tl_indicator_margin_right="2dp"
+                tl:tl_indicator_color="#618CFF"
                 tl:tl_indicator_style="BLOCK"/>
 
             <com.flyco.tablayout.SlidingTabLayout
