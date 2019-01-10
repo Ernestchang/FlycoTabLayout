@@ -173,7 +173,7 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
         mDividerPadding = ta.getDimension(R.styleable.SlidingTabLayout_tl_divider_padding, dp2px(12));
 
         mStrokeColor = ta.getColor(R.styleable.SlidingTabLayout_tl_stroke_color, Color.parseColor("#ffffff"));
-        mStrokeWidth = ta.getDimension(R.styleable.SlidingTabLayout_tl_stroke_color, dp2px(0));
+        mStrokeWidth = ta.getDimension(R.styleable.SlidingTabLayout_tl_stroke_width, dp2px(0));
 
         mTextsize = ta.getDimension(R.styleable.SlidingTabLayout_tl_textsize, sp2px(14));
         mTextSelectSize = ta.getDimension(R.styleable.SlidingTabLayout_tl_textSelectSize, sp2px(14));
